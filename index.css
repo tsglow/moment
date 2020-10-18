@@ -1,12 +1,16 @@
 body {
     background-color: bisque;
-    color: #34495e;    
+    color: white;    
     animation: fadeIn .5s linear;
 }
 
 .js-form,
 .js-grettings {
     display: none;
+}
+
+h4 {
+    
 }
 
 .showing {
