@@ -29,7 +29,8 @@ body {
     width: 100%;
     height: 100;
     z-index: -1;  
-    animation: fadeIn .5s linear;
+    animation: fadeIn 0.5s linear;
+
 
 }
 

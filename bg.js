@@ -2,14 +2,12 @@ const body = document.querySelector("body");
 
 const IMG_NUMBER = 3;
 
-function handleImgLoad(){
-    console.log("finished loading");
-}
 
 
-function paintImage(imgNumber){
+
+function paintImage(randomNumber){
     const image = new Image();
-    image.src = `images/${imgNumber + 1 }.jpg`;
+    image.src = `images/${randomNumber + 1 }.jpg`;
      image.classList.add("bgImage");
      body.appendChild(image);
 }
