@@ -47,8 +47,8 @@ function getWeather(lat, lng){
           image.classList.add("weather");
           
           // const weatherDis = cWeather.description          
-          weatherInfo.innerHTML = `현재 위치 : ${loc}  현재 온도 : ${temp}℃, 현재 습도 : ${hum}℃`;
-          weatherInfo.appendChild(image);
+          weatherInfo.innerHTML = `You're place is ${loc}.  temp : ${temp}℃, humidity : ${hum}%`;
+          //weatherInfo.appendChild(image);
         }
     )
 }

@@ -9,18 +9,20 @@
     <body>
         <div class="js-clock"> <!-- 시계 부분 -->
             <h1>00:00</h1>
+        </div>        
+        <div>
+            <form class="js-form" > <!-- 이름을 입력받아서 인사 출력 후 고정-->
+                <input class="inputname" type="text" placeholder="What is your name?"/>
+            </form>
+            <div class="js-greetings"></div>            
+            <div class="js-weather"></div>
         </div>
-
-        <form class="js-form" > <!-- 이름을 입력받아서 인사 출력 후 고정-->
-            <input type="text" placeholder="What is your name?"/>
-        </form>
-        <h4><span class="js-greetings"></span></h4>
-        <div class="js-weather"></div> 
-        <form id="jsForm">
-            <input id="jsInput" type="text" placeholder="Add Task" />
+        <br/><br/>
+        <form id="js-ToDoForm">
+            <input id="jsInput" class="jsInput"type="text" placeholder="Add Task" />
           </form>
           <h2>Pending</h2>
-          <ul id="jsPending"></ul>
+          <ul id="jsPending"></ul><br/><br/>
           <h2>Finished</h2>
           <ul id="jsFinished"></ul>
 <!--

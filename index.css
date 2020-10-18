@@ -1,23 +1,72 @@
 body {
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: bisque;
+    background-color: #343d46;
     color: white;    
     animation: fadeIn .5s linear;
+    text-align: center;
     
 }
 
-.js-form,
-.js-grettings {
+h1{   
+    margin: 10px;   
+}
+
+
+
+.js-clock {        
+    font-size: 50px;    
+    color: white;
+    text-shadow: 2px 2px 2px slategray;
+    }
+
+.js-form{
     display: none;
 }
 
-h4 {
-    
+.js-greetings{    
+    font-size: 50pt;    
+    text-shadow: 2px 2px 2px slategray;
+    color: white;    
 }
+
+.js-weather {    
+    font-size: 16px;
+    text-shadow: 1px 3px 3px slategray;
+    vertical-align: top;
+}
+
+h2{
+    text-shadow: 1px 3px 3px slategray;
+}
+
+.inputname,
+.jsInput{
+    width: 300px;        
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    text-align: center;
+    font-size: 18pt;    
+    color: white;    
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+
+input::placeholder {
+    color: whitesmoke;
+    font-style: italic
+}
+
 
 .showing {
     display: block;
+    text-align: center;
 }
 
 @keyframes fadeIn{

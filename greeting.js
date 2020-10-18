@@ -1,9 +1,8 @@
 const userForm = document.querySelector(".js-form");
 const input = userForm.querySelector("input");
-const greeting = document.querySelector(".js-greetings");
-
-const USER_LS = "currentUser", SHOWING_CN = "showing"; 
-
+const USER_LS = "currentUser"
+const SHOWING_CN = "showing"; 
+const greeting = document.querySelector(".js-greetings")
 
 /*
 시행 순서 02 loadName()
@@ -15,7 +14,6 @@ function loadName(){
         askForName(); 
     } else {  
         paintGreeting(currentUser); 
-
     }
 
 }
@@ -36,9 +34,8 @@ function handleSubmit(event){
 
 
 function paintGreeting(text){   // handleSubmit 함수에서 text 형태로 던져준 값을 아래와 같이 처리한다.
-    userForm.classList.remove(SHOWING_CN); // 먼저 form의 class에서 다시 showing(SHOWING_CN의 값)을 제거해서 js-form form showing을 js-form form으로 돌려놓고 (즉 css에 의해 표시되지 않게 하고)
-    greeting.classList.add(SHOWING_CN); // 다음에 h4의 class에 showing을 추가한다(css에 의해 표시on). css에 의해 showing 클래스가 붙으면 display:block처리된다
-    greeting.innerText = `hello ${text}`; // js-greetings의 내용물을 'hello + handleSubmit이 던져준 text'로 바꾼다
+    userForm.classList.remove(SHOWING_CN); // 먼저 form의 class에서 다시 showing(SHOWING_CN의 값)을 제거해서 js-form form showing을 js-form form으로 돌려놓고 (즉 css에 의해 표시되지 않게 하고)    
+    greeting.innerText = `Hello, ${text}`; // js-greetings의 내용물을 'hello + handleSubmit이 던져준 text'로 바꾼다
 }
 
 function saveName(text){
