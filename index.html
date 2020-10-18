@@ -15,16 +15,26 @@
             <input type="text" placeholder="What is your name?"/>
         </form>
         <h4 class="js-greetings"></h4>
-
-        <form class="js-toDoForm"> <!-- to do list 입력 폼-->
+        <div class="js-weather"></div> 
+        <form id="jsForm">
+            <input id="jsInput" type="text" placeholder="Add Task" />
+          </form>
+          <h2>Pending</h2>
+          <ul id="jsPending"></ul>
+          <h2>Finished</h2>
+          <ul id="jsFinished"></ul>
+<!--
+        <form class="js-toDoForm"> to do list 입력 폼
             <input type="text" placeholder="write a to do" />
         </form>
-        <ul class="js-toDoList"> <!-- to do list -->
+        <ul class="js-toDoList"> to do list
         </ul>
-        <div class="js-weather"></div>        
+-->
+
+              
         <script src="clock.js"></script>
         <script src="greeting.js"></script>
-        <script src="todo.js"></script>        
+        <script src="todoplus.js"></script>        
         <script src="bg.js"></script>        
         <script src="weather.js"></script>     
     </body>

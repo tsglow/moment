@@ -1,15 +1,12 @@
-// <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
-// <⚠️ /DONT DELETE THIS ⚠️>
-
 const toDoForm = document.querySelector("#jsForm");
 const toDoInput = toDoForm.querySelector("#jsInput");
 const pendingList = document.querySelector("#jsPending");
-let pending = [];
-const PENDING_LS = "pending";
+    let pending = [];
+    const PENDING_LS = "pending";
+
 const finishedList = document.querySelector("#jsFinished");
-let finished = [];
-const FINISHED_LS = "finished";
+    let finished = [];
+    const FINISHED_LS = "finished";
 
 function handlePenBtn(event) {
   const liToDel = event.target.parentNode;
@@ -148,8 +145,14 @@ function loadPendingList() {
 function handleSubmit(event) {
   event.preventDefault();
   const inputValue = toDoInput.value;
-  paintPending(inputValue);
-  toDoInput.value = "";
+  if (inputValue == ""){
+      toDoInput.placeholder = "enter after write a to do"
+  } else {
+    paintPending(inputValue);
+    toDoInput.value = "";
+    toDoInput.placeholder = ""
+  }
+  
 }
 
 function init() {

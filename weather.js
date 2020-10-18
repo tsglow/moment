@@ -18,6 +18,7 @@ index.html에서 내용을 변경할 js-weather class를 선택해서 weatherInf
 */
 
 const weatherInfo = document.querySelector(".js-weather");
+const wIconUrl = "https://openweathermap.org/img/w/"
 const API_KEY = "7944e27660b7a3a2bd2bf04140fb1226";
 const COORDS = 'coords';
 
@@ -36,12 +37,18 @@ function getWeather(lat, lng){
         return response.json()
         }      
         ).then(function(json){ //Part. B
+            console.log(json)
           const loc = json.name
           const temp = json.main.temp;
           const hum = json.main.humidity;
-          const cWeather = json.weather[0].description
+          //const cWeather = json.weather[0].description
+          const image = new Image();
+          image.src = `${wIconUrl}${json.weather[0].icon}.png`
+          image.classList.add("weather");
+          
           // const weatherDis = cWeather.description          
-          weatherInfo.innerHTML = `현재 위치 : ${loc} 현재 날씨 : ${cWeather}, 현재 온도 : ${temp}℃, 현재 습도 : ${hum}℃`;
+          weatherInfo.innerHTML = `현재 위치 : ${loc}  현재 온도 : ${temp}℃, 현재 습도 : ${hum}℃`;
+          weatherInfo.appendChild(image);
         }
     )
 }
