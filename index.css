@@ -40,8 +40,7 @@ h2{
     text-shadow: 1px 3px 3px slategray;
 }
 
-.inputname,
-.jsInput{
+.inputname{
     width: 300px;        
     height: 50px;
     background: #2b303b;
@@ -50,6 +49,18 @@ h2{
     font-size: 18pt;    
     color: white;    
     border-radius: 5px;
+}
+
+.jsInput{
+    width: 600px;        
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    text-align: center;
+    font-size: 18pt;    
+    color: white;    
+    border-radius: 5px;
+
 }
 
 ul {

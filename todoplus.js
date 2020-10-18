@@ -146,11 +146,11 @@ function handleSubmit(event) {
   event.preventDefault();
   const inputValue = toDoInput.value;
   if (inputValue == ""){
-      toDoInput.placeholder = "enter after write a to do"
+      toDoInput.placeholder = "press enter after write a to do"
   } else {
     paintPending(inputValue);
     toDoInput.value = "";
-    toDoInput.placeholder = ""
+    toDoInput.placeholder = "Add Task"
   }
   
 }
