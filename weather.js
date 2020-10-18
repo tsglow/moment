@@ -30,14 +30,20 @@ Part. B : json 항목중에서 최종적으로 유저에게 표시해줄 값을 
 
 function getWeather(lat, lng){
  fetch( //Part. A
-     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
+       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
+     //`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
      ).then(function(response){
-         return response.json()
-     }).then(function(json){ //Part. B
-         const temp = json.current.temp;
-         const hum = json.current.humidity;
-         weatherInfo.innerHTML = `현재 온도 : ${temp}℃, 현재 습도 : ${hum}℃`;
-        })
+        return response.json()
+        }      
+        ).then(function(json){ //Part. B
+          const loc = json.name
+          const temp = json.main.temp;
+          const hum = json.main.humidity;
+          const cWeather = json.weather[0].description
+          // const weatherDis = cWeather.description          
+          weatherInfo.innerHTML = `현재 위치 : ${loc} 현재 날씨 : ${cWeather}, 현재 온도 : ${temp}℃, 현재 습도 : ${hum}℃`;
+        }
+    )
 }
 
 /*
