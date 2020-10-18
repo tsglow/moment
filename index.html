@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>momentum</title>
+        <link rel="stylesheet" type href="index.css" />
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+        <div class="js-clock"> <!-- 시계 부분 -->
+            <h1>00:00</h1>
+        </div>
+
+        <form class="js-form" > <!-- 이름을 입력받아서 인사 출력 후 고정-->
+            <input type="text" placeholder="What is your name?"/>
+        </form>
+        <h4 class="js-greetings"></h4>
+
+        <form class="js-toDoForm"> <!-- to do list 입력 폼-->
+            <input type="text" placeholder="write a to do" />
+        </form>
+        <ul class="js-toDoList"> <!-- to do list -->
+        </ul>
+        <div class="js-weather"></div>        
+        <script src="clock.js"></script>
+        <script src="greeting.js"></script>
+        <script src="todo.js"></script>        
+        <script src="bg.js"></script>        
+        <script src="weather.js"></script>     
+    </body>
+</html>
